@@ -37,4 +37,7 @@ RUN echo 'alias heroku_config=". $HOME/.theia/heroku_config.sh"' >> ~/.bashrc
 COPY ./build-assets/make_url.py /home/$USERNAME/.theia/make_url.py
 RUN echo 'alias make_url="python3 $HOME/.theia/make_url.py "' >> ~/.bashrc
 
+USER root
+RUN chown -R $USERNAME:$USERNAME /home/$USERNAME/.theia
+
 CMD ["tail", "-f", "/dev/null"]
