@@ -5,14 +5,14 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - "./postgres/socket:/var/run/postgresql"
+      - "/tmp/postgres/socket:/var/run/postgresql"
  
   psql:
     image: postgres:11.9
     environment:
-      - POSTGRES_PASSWORD=pass
-      - POSTGRES_USER=user
-      - POSTGRES_DB=database
+      - POSTGRES_PASSWORD=pass1234
+      - POSTGRES_USER=codeany
+      - POSTGRES_DB=mydb
     network_mode: service:app
     volumes:
-      - "./postgres/socket:/var/run/postgresql"
+      - "/tmp/postgres/socket:/var/run/postgresql"
