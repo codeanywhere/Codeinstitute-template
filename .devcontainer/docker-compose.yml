@@ -13,3 +13,4 @@ services:
       - POSTGRES_PASSWORD=pass
       - POSTGRES_USER=user
       - POSTGRES_DB=database
+    network_mode: service:app
