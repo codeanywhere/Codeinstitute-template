@@ -24,4 +24,5 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=pass1234
     depends_on:
       - psql
-    volumes: "servers.json:/pgadmin4/servers.json"
+    volumes:
+      - servers.json:/pgadmin4/servers.json
