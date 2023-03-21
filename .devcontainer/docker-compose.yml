@@ -16,13 +16,3 @@ services:
     network_mode: service:app
     volumes:
       - "/tmp/postgres/socket:/var/run/postgresql"
-
-  pgadmin:
-    image: dpage/pgadmin4:6.14
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=admin
-      - PGADMIN_DEFAULT_PASSWORD=pass1234
-    depends_on:
-      - psql
-    volumes:
-      - "./servers.json:/pgadmin4/servers.json"
