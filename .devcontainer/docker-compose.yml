@@ -25,4 +25,4 @@ services:
     depends_on:
       - psql
     volumes:
-      - "servers.json:/pgadmin4/servers.json"
+      - "./servers.json:/pgadmin4/servers.json"
