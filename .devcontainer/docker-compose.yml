@@ -20,7 +20,7 @@ services:
   pg_admin:
     image: dpage/pgadmin4:4.23
     ports:
-      - 55400:80
+      - 15400:80
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin
       - PGADMIN_DEFAULT_PASSWORD=pass1234
