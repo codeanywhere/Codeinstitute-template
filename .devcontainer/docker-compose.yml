@@ -17,7 +17,7 @@ services:
     volumes:
       - "/tmp/postgres/socket:/var/run/postgresql"
 
-  pg_admin:
+  pgadmin:
     image: dpage/pgadmin4:4.23
     ports:
       - 15400:80
